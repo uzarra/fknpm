@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as converter from 'xml-js';
+import { json2xml } from 'xml-js';
 
 @Component({
   selector: 'app-converter',
@@ -7,11 +7,10 @@ import * as converter from 'xml-js';
   styleUrls: ['./converter.component.css']
 })
 export class ConverterComponent implements OnInit {
-  
-  parser = require('xml-js');
-  jsonS = '{"u": "l", "k": true}';
-  xmlS = this.parser.json2xml(this.jsonS);
-  constructor() { }
+  jsonS = '{"uqwe": "l", "kqwe": true}';
+  xmlS = json2xml(this.jsonS, {compact: true});
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
