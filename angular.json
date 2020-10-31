@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jml-app"
+    }
+  },
+  "defaultProject": "jml-app",
+  "cli": {
+    "analytics": false
+  }
 }
